@@ -1,0 +1,19 @@
+{
+  "name": "resbrev",
+  "version": "1.0.0",
+  "description": "A chainable response helper that implements most well known status codes and some mime types",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dstack/resbrev.git"
+  },
+  "author": "Drew Strickland <andrew.flagship@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dstack/resbrev/issues"
+  },
+  "homepage": "https://github.com/dstack/resbrev"
+}
