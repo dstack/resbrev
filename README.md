@@ -9,21 +9,22 @@ npm install --save resbrev
 # use
 - Wrap a single response object
 
-var http = require('http'),
-resbrev = require('resbrev');
-http.createServer(function (req, res) {
-  resbrev(res);
-  res.ok('Hello World\n')
-  }).listen(1337, '127.0.0.1');
-  console.log('Server running at http://127.0.0.1:1337/');
+      var http = require('http'),
+        resbrev = require('resbrev');
+      http.createServer(function (req, res) {
+        resbrev(res);
+        res.ok('Hello World\n')
+      }).listen(1337, '127.0.0.1');
+      console.log('Server running at http://127.0.0.1:1337/');
 
-  - Connect / Express middleware
-  var conenct = require('connect'),
-  resbrev = require('resbrev');
-  var app = connect(resbrev)
-  .use('/api', function(req,res,next){
-    res.json({foo: 'bar'});
-    });
+- Connect / Express middleware
+
+      var conenct = require('connect'),
+        resbrev = require('resbrev');
+      var app = connect(resbrev)
+        .use('/api', function(req,res,next){
+          res.json({foo: 'bar'});
+        });
 
 # methods
 Response objects will be extended with the following **non-enumerable, non-writable** methods.  For the success, redirect, client error, server error, mime tpye, and fun methods, sending data will end the request.  Data is almost always optional (jsonp being the exception).
